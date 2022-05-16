@@ -1,0 +1,16 @@
+.borde
+{
+    border: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+tbody > tr:hover
+{ 
+    background-color:aqua;
+    cursor: default;
+}
+span
+{
+    margin-right: 5px;
+}

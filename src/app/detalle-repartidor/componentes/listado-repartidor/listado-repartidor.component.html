@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <!-- <div class="borde" *ngFor="let item of list">
+        <span>Nombre: {{item.nombre}}</span>
+        <span>Dni: {{item.dni}}</span>
+        <span>Edad: {{item.edad}}  </span>
+        <span>Transporte: {{item.capacidad_transporte}}</span>
+        <span>Sexo: {{item.sexo}}</span>
+    </div> -->
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Capacidad_Transporte</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Pais</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list; let i = index" (click) = "disparoOuput(item)">
+            <th >{{i}}</th>
+            <td>{{item.dni}} </td>
+            <td>{{item.nombre}} </td>
+            <td>{{item.edad}} </td>
+            <td>{{item.capacidad_transporte}} </td>
+            <td>{{item.sexo}}</td>
+            <td>{{item.pais.translations.spa.common}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
