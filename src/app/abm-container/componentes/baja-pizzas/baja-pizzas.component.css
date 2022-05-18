@@ -1,0 +1,19 @@
+.minimo
+{
+    min-height: 200px;
+}
+img
+{
+    margin: auto;
+    display: block;
+    height: 100px;
+    width: 100px;
+}
+.baja
+{
+    margin-bottom: 40px;
+}
+.bajadefecto
+{
+    min-height: 199px;
+}

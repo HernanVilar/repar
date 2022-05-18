@@ -3,6 +3,7 @@
   </div>
   <div *ngIf="datoborrar == null">
   <div class="card-body">
+    <div class="bajadefecto">
     <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
     <ul class="list-unstyled mt-3 mb-4">
       <li>20 users included</li>
@@ -10,14 +11,20 @@
       <li>Priority email support</li>
       <li>Help center access</li>
     </ul>
+  </div>
 
     <button type="button" class="w-100 btn btn-lg btn-primary">Borrar</button>
   </div>
   </div>
-  <div *ngIf="datoborrar != null">
-    {{datoborrar.nombre}}
-    {{datoborrar.ingredientes}}
-    {{datoborrar.precio}}
-    {{datoborrar.peso}}
-    <button type="button" class="w-100 btn btn-lg btn-primary">Borrar</button>
+  <div *ngIf="datoborrar != null" class="card-body ">
+    <div class="minimo">
+      <div class="baja">
+      {{datoborrar.nombre}}
+      {{datoborrar.ingredientes}}
+      {{datoborrar.precio}}
+      {{datoborrar.peso}}
+    </div>
+      <img src="https://123140-376058-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/09/18.png" alt="">
+    </div>
+    <button (click) = "Borrar()" type="button" class="w-100 btn btn-lg btn-primary">Borrar</button>
   </div>

@@ -26,8 +26,14 @@ export class PizzasService {
  
   update(id: string, data: Pizza): Promise<void> {
     this.MensajesRef = this.db.collection(this.dbPath);
-    return this.MensajesRef.doc(id).update(data);
+    return this.MensajesRef.doc(id).update({
+      nombre: data.nombre,
+      ingredientes: data.ingredientes,
+      precio: data.precio,
+      peso: data.peso
+    });
   }
+  
 
   delete(id: string): Promise<void> {
     this.MensajesRef = this.db.collection(this.dbPath);

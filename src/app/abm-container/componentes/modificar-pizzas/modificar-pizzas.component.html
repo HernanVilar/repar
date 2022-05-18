@@ -1,13 +1,36 @@
 <div class="card-header py-3">
     <h4 class="my-0 fw-normal">Modificar</h4>
   </div>
-  <div class="card-body">
+  <div *ngIf="datoborrar == null" class="card-body">
     <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
-    <ul class="list-unstyled mt-3 mb-4">
+    <ul class="list-unstyled mt-3 mb-4 bajadefecto">
       <li>30 users included</li>
       <li>15 GB of storage</li>
       <li>Phone and email support</li>
       <li>Help center access</li>
     </ul>
     <button type="button" class="w-100 btn btn-lg btn-primary">Modificar</button>
+    </div>
+    <div *ngIf="datoborrar != null" class="card-body">
+      <form action="">
+        <div class="minimo">
+      <div>
+        <label for="nombree">nombre</label>
+        <input disabled type="text" [value] = "datoborrar.nombre" id="nombree">
+      </div>
+      <div>
+        <label for="ingredientee">Ingredientes: </label>
+        <input type="text" [value] = "datoborrar.ingredientes" id="ingredientee">
+      </div>
+      <div>
+     <label for="precioo">Precio: </label>
+     <input [value] = "datoborrar.precio" id="precioo" type="number">
+      </div>
+      <div>
+      <label for="pesoo">Peso: </label>
+      <input [value]= "datoborrar.peso" id="pesoo" type="text">
+      </div>
+    </div>
+      <button (click) = "modificar()" type="button" class="w-100 btn btn-lg btn-primary">Modificar</button>
+    </form>
   </div>

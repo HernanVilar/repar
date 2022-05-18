@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pizza } from 'src/app/clases/pizza';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-principal',
@@ -8,7 +9,13 @@ import { Pizza } from 'src/app/clases/pizza';
 })
 export class PrincipalComponent implements OnInit {
   pizzaSeleccionada!:Pizza;
-  constructor() { }
+  constructor(private auth:AuthService) 
+  {
+    auth.verificar().then((e:any)=>{
+   
+      
+    })
+  }
 
   ngOnInit(): void {
   }
