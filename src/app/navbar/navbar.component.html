@@ -10,6 +10,7 @@
       <div class="navbar-nav" id="navbarText">
           <a *ngIf="verificar.logeado != true" class="navbar-brand esa" id="pepe" [routerLink]="['/ingreso/login']" >Login <span class="sr-only">(current)</span></a>
           <a *ngIf="verificar.logeado != true" class="navbar-brand esa" id="pepe" [routerLink]="['/ingreso/registrar']" >Registro</a>
+          <a *ngIf="verificar.logeado == true" class="navbar-brand esa" id="pepe" [routerLink]="['/salenPizzas']"  >Salen Pizzas</a>
           <a *ngIf="verificar.logeado == true" class="navbar-brand esa" id="pepe" [routerLink]="['/altaRepartidor']"  >Alta Repartidor</a>
           <a *ngIf="verificar.logeado == true" class="navbar-brand esa" id="pepe" [routerLink]="['/detalleRepartidor']"  >Detalle Repartidor</a>
           <a (click) = "cerrar()" *ngIf="verificar.logeado == true" class="navbar-brand esa" id="pepe" >LogOut</a>

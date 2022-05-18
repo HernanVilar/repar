@@ -11,3 +11,11 @@ span
 {
     margin-right: 5px;
 }
+tbody
+{
+    width: 100%;
+}
+tr
+{
+    width: 100%;
+}

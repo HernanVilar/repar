@@ -1,0 +1,39 @@
+
+<div class="card-header py-3">
+    <h4 class="my-0 fw-normal">Alta</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup] = "formGroup" (ngSubmit) = "aceptar()">
+        <div class="row">
+        <div class="col-md-6 fet">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="NOMBRE" formControlName= "nombre">
+          <small class="invalid" *ngIf = "formGroup.get('nombre')?.hasError('required') && formGroup.get('nombre')?.touched">Nombre requerido</small>
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+        <div class="col-md-6 fet">
+          <div class="mb-3">
+            <label for="ingrediente">Ingrediente</label>
+            <input type="text" class="form-control" placeholder="INGREDIENTE" id="ingrediente" formControlName= "ingrediente">
+            <small class="invalid" *ngIf = "formGroup.get('ingrediente')?.hasError('required') && formGroup.get('ingrediente')?.touched">Ingrediente requerido</small>
+            </div>
+        </div>
+        </div> 
+        <div class="row">
+        <div class="col-md-6 fet">
+        <label for="precio">Precio</label>
+        <input type="number" class="form-control" placeholder="PRECIO" id="precio" formControlName= "precio">
+        <small class="invalid" *ngIf = "formGroup.get('precio')?.hasError('required') && formGroup.get('precio')?.touched">Precio requerido</small>
+        </div>
+        <div class="col-md-6 fet">
+        <label for="peso">Peso</label>
+        <input type="number" class="form-control" placeholder="PESO" id="peso" formControlName= "peso">
+        <small class="invalid" *ngIf = "formGroup.get('peso')?.hasError('required') && formGroup.get('peso')?.touched">Peso requerido</small>
+        <small class="invalid" *ngIf = "formGroup.get('peso')?.hasError('min') || formGroup.get('peso')?.hasError('max') && formGroup.get('peso')?.touched">Peso entre 500-1000</small>
+        </div>
+        </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled] = "formGroup.invalid">Enviar</button>
+        </form>
+  </div>

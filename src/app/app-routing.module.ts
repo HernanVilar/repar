@@ -13,6 +13,7 @@ const routes: Routes =
   {path: 'ingreso', loadChildren: () => import('./ingreso/ingreso.module').then(m => m.IngresoModule),canActivate:[GuardianinicioGuard] },
   {path: 'altaRepartidor', loadChildren: () => import('./alta-repartidor/alta-repartidor.module').then(m => m.AltaRepartidorModule),canActivate:[GuardianAutentificadorGuard] },
   {path: 'detalleRepartidor', loadChildren: () => import('./detalle-repartidor/detalle-repartidor.module').then(m => m.DetalleRepartidorModule),canActivate:[GuardianAutentificadorGuard] },
+  {path: 'salenPizzas', loadChildren: () => import('./abm-container/abm-container.module').then(m => m.AbmContainerModule),canActivate:[GuardianAutentificadorGuard] },
 ];
 
 

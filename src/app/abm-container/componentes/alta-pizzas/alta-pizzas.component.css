@@ -1,0 +1,27 @@
+.baaa
+{
+   border: solid 3px black;
+   padding: 5px;
+}
+
+.ddd
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img
+ {
+     width: 40px;
+     height: 40px;
+ }
+ .invalid {
+    color: red;
+}
+.flex
+{
+    display: flex;
+}
+.fet {
+    height: 100px;
+}

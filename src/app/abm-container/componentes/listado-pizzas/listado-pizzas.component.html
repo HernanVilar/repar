@@ -13,23 +13,19 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Dni</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Capacidad_Transporte</th>
-              <th scope="col">Sexo</th>
-              <th scope="col">Pais</th>
+              <th scope="col">Ingrediente</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Peso</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let item of list; let i = index" (click) = "disparoOuput(item)">
               <th >{{i}}</th>
-              <td>{{item.dni}} </td>
               <td>{{item.nombre}} </td>
-              <td>{{item.edad}} </td>
-              <td>{{item.capacidad_transporte}} </td>
-              <td>{{item.sexo}}</td>
-              <td>{{item.pais.translations.spa.common}}</td>
+              <td>{{item.ingredientes}} </td>
+              <td>{{item.precio}} </td>
+              <td>{{item.peso}} </td>
             </tr>
           </tbody>
         </table>
